@@ -4,6 +4,8 @@ Repositório para testes automáticos de API e WEB.
 - API: restassured e junit
 - WEB: selenium, cucumber e junit
 
+![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg)
+
 ---
 
 ## Índice sobre o projeto:
