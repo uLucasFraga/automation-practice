@@ -75,8 +75,8 @@ Exemplo dos valores abaixo:
 
 ```
 BASE_URL=https://gfi.world/pt-pt
-CARREIRAS_URL=/carreiras
-PARCEIROS_URL=/parceiros
+CARREIRAS_URL=https://gfi.world/pt-pt/carreiras
+PARCEIROS_URL=https://gfi.world/pt-pt/parceiros
 ```
 ###### Nota²:
 Como boa prática por questão de segurança, esses dados poderiam ser considerados sensíveis por isso é interessante não expormos no código.
