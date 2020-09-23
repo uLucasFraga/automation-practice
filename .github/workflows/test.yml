@@ -1,0 +1,22 @@
+name: TEST CI/CD
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [8]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK ${{ matrix.java-version }}
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ matrix.java-version }}
+      - name: install-dependencies
+        run: mvn clean install -DskipTests
+      - name: e2e-tests
+        run: mvn clean test
