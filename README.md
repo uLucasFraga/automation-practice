@@ -2,7 +2,7 @@
 
 ## Índice sobre o projeto:
 
-> Índice `[README](https://github.com/uLucasFraga/com.gfi-com.gfi.world-automation/blob/master/README.md)`:
+> Índice [README:](https://github.com/uLucasFraga/com.gfi-com.gfi.world-automation/blob/master/README.md)
 
 1. [DESAFIO_WEB](https://github.com/uLucasFraga/com.gfi-com.gfi.world-automation/blob/master/web/DESAFIO_WEB.md)
 
