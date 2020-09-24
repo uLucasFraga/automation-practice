@@ -6,7 +6,7 @@
 
 1. [DESAFIO_WEB](https://github.com/uLucasFraga/gfi-world-automation/blob/master/DESAFIO_WEB.md)
 
-### status do projeto: ![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg?branch=master)
+##### status: ![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg?branch=master)
 
 ---
 
