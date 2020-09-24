@@ -1,25 +1,38 @@
 # GFI-WORLD-AUTOMATION
 
-Repositório para testes automáticos de API e WEB.
-- API: restassured e junit
-- WEB: selenium, cucumber e junit
-
-![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg)
-
----
-
 ## Índice sobre o projeto:
 
-> Índice `[README](https://github.com/uLucasFraga/gfi-world-automation/blob/master/README.md)`:
+> Índice [README:](https://github.com/uLucasFraga/gfi-world-automation/blob/master/README.md)
 
-1. [DESAFIO_API](https://github.com/uLucasFraga/gfi-world-automation/blob/master/api/DESAFIO_API.md)
-2. [DESAFIO_WEB](https://github.com/uLucasFraga/gfi-world-automation/blob/master/web/DESAFIO_WEB.md)
+1. [DESAFIO_WEB](https://github.com/uLucasFraga/gfi-world-automation/blob/master/DESAFIO_WEB.md)
+
+##### status:
+
+![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg?branch=master)
 
 ---
 
-## Licença
+### Instruções:
+Os testes deverão ser implementados em ferramenta escolhida por ti (por ex. Robot framework, selenium, UFT…).
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+#### Descrição
+Queremos efetuar alguns testes de forma a validarmos que está tudo ok no site: `https://gfi.world/pt-pt/`
 
-- **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2020 © <a href="https://www.linkedin.com/in/dtferreira/" target="_blank">Diogo Ferreira</a>.
+ 
+> User Story: Carreiras
+
+Como utilizador quero garantir que as ofertas estão disponíveis no site.
+
+Adicionalmente quero também saber quantas oportunidades de emprego existem e as suas áreas.
+
+> User Story: Parceiros
+
+Como utilizador quero garantir que os parceiros estão disponíveis no site.
+
+Adicionalmente quero também saber quantos parceiros existem.
+
+
+### Resumo: 
+O objetivo é demonstrares os resultados na conversa da próxima segunda-feira.
+
+---

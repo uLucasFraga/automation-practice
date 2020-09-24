@@ -1,15 +1,19 @@
 # DESAFIO-WEB
 
 Repositório para testes automáticos para WEB.
-- WEB: selenium, cucumber e junit
+- WEB: selenium, cucumber, junit e allure
 
 > Testando e validando navegadores com selenium em java: [SELENIUM](https://github.com/SeleniumHQ/selenium)
 
 ---
 
+##### status:
+
+![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg?branch=develop)
+
 ## Índice sobre o projeto:
 
-> Índice `[README](https://github.com/uLucasFraga/gfi-world-automation/blob/master/README.md)`:
+> Índice [README:](https://github.com/uLucasFraga/gfi-world-automation/blob/master/README.md)
 
 - [Pre-requisitos](#pre-requisitos)
 - [Configuração](#configuração)
@@ -74,9 +78,9 @@ Antes de rodar os testes siga os passos abaixo:
 Exemplo dos valores abaixo:
 
 ```
-BASE_URL=https://gfi.world/pt-pt
-CARREIRAS_URL=/carreiras
-PARCEIROS_URL=/parceiros
+BASE_URL=https://com.gfi.com.gfi.world/pt-pt
+CARREIRAS_URL=https://com.gfi.com.gfi.world/pt-pt/carreiras
+PARCEIROS_URL=https://com.gfi.com.gfi.world/pt-pt/parceiros
 ```
 ###### Nota²:
 Como boa prática por questão de segurança, esses dados poderiam ser considerados sensíveis por isso é interessante não expormos no código.
@@ -104,7 +108,7 @@ $ mvn test -DCucumber.options="--tags '@example'"
 
 > rodar os testes via IDE (IntelliJ)
 
-Clicar com o botão direito no projeto/class **gfi-world-automation/web > Run 'AllTests'** ou **CTRL+F5**
+Clicar com o botão direito no projeto/class **com.gfi-com.gfi.world-automation/web > Run 'AllTests'** ou **CTRL+F5**
 
 ## Report
 Após a etapa de testes, será criada uma pasta chamada `allure-results` e diversos arquivos **.json** dentro.
@@ -125,3 +129,12 @@ mvn clean test-compile -Dit.test=AllRegressionIT verify -DskipUTs=true
 allure serve allure-results
 ```
 O reporte do Allure subira-a automaticamente.
+
+--- 
+
+## Licença
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+- Copyright 2020 © <a href="https://www.linkedin.com/in/dtferreira/" target="_blank">Diogo Ferreira</a>.
