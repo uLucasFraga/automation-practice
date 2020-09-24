@@ -1,5 +1,6 @@
 package com.gfi.world.automation.utils;
 
+import com.gfi.world.automation.utils.commons.Page;
 import cucumber.api.Scenario;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;

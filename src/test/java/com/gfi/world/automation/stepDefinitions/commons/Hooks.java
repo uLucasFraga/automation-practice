@@ -1,4 +1,4 @@
-package com.gfi.world.automation.stepDefinitions;
+package com.gfi.world.automation.stepDefinitions.commons;
 
 import com.gfi.world.automation.enums.Browsers;
 import com.gfi.world.automation.utils.AllureHelper;

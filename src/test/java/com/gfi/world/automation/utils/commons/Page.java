@@ -1,4 +1,4 @@
-package com.gfi.world.automation.utils;
+package com.gfi.world.automation.utils.commons;
 
 import com.gfi.world.automation.enums.Browsers;
 import org.openqa.selenium.By;
@@ -83,6 +83,22 @@ public class Page {
   protected void waitElementInvisible(By locator) {
     new WebDriverWait(getDriver(), DEFAULT_TIME_WAIT)
         .until(ExpectedConditions.invisibilityOfElementLocated((locator)));
+  }
+
+  protected void countList(By locator, String message) {
+    isVisible(locator);
+    List<WebElement> list = getElements(locator);
+    System.out.println(message + list.size());
+  }
+
+  protected void getListNames(By locator, String message) {
+    isVisible(locator);
+    List<WebElement> list_names = getElements(locator);
+    List<String> all_elements_text = new ArrayList<>();
+    for (WebElement element : list_names) {
+      all_elements_text.add(element.getText());
+      System.out.println(message + element.getText());
+    }
   }
 
   protected WebElement getElement(By locator) {

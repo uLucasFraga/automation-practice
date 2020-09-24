@@ -1,10 +1,10 @@
 package com.gfi.world.automation.pages;
 
 import com.gfi.world.automation.utils.HandleProperties;
-import com.gfi.world.automation.utils.Page;
+import com.gfi.world.automation.utils.commons.Page;
 import org.openqa.selenium.By;
 
-public class GfiWorldHomePage extends Page {
+public class HomePage extends Page {
 
   private final By ELEMENT_TEXT = By.cssSelector("h2[class='inbl fs70']");
 
