@@ -305,7 +305,7 @@ mvnw**
 **/logs/
 **/.clover/
 !.config.properties.example
-.config.properties
+config.properties
 test/*
 allure*
 !/src/test/java/resources/allure.properties

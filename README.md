@@ -8,7 +8,7 @@
 
 ##### status:
 
-![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg?branch=master)
+![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg)
 
 ---
 
