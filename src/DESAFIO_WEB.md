@@ -1,11 +1,14 @@
 # DESAFIO-WEB
 
 Repositório para testes automáticos para WEB.
-- WEB: selenium, cucumber e junit
+- WEB: selenium, cucumber, junit e allure
 
 > Testando e validando navegadores com selenium em java: [SELENIUM](https://github.com/SeleniumHQ/selenium)
 
 ---
+
+### Status do projeto: ![TEST CI/CD](https://github.com/uLucasFraga/com.gfi-com.gfi.world-automation/workflows/TEST%20CI/CD/badge.svg)
+
 
 ## Índice sobre o projeto:
 
@@ -125,3 +128,12 @@ mvn clean test-compile -Dit.test=AllRegressionIT verify -DskipUTs=true
 allure serve allure-results
 ```
 O reporte do Allure subira-a automaticamente.
+
+--- 
+
+## Licença
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+- Copyright 2020 © <a href="https://www.linkedin.com/in/dtferreira/" target="_blank">Diogo Ferreira</a>.
