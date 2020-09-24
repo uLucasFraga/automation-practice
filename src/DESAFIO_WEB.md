@@ -9,7 +9,7 @@ Repositório para testes automáticos para WEB.
 
 ## Índice sobre o projeto:
 
-> Índice `[README](https://github.com/uLucasFraga/gfi-world-automation/blob/master/README.md)`:
+> Índice `[README](https://github.com/uLucasFraga/com.gfi-com.gfi.world-automation/blob/master/README.md)`:
 
 - [Pre-requisitos](#pre-requisitos)
 - [Configuração](#configuração)
@@ -49,7 +49,7 @@ Criar um projeto _maven_ ou usar o arquivo _pom.xml_ para fazer o download/insta
 
 - Clonar esse repositório localmente usando http ou ssh, por exemplo:
 
-`git clone https://github.com/uLucasFraga/gfi-world-automation.git`
+`git clone https://github.com/uLucasFraga/com.gfi-com.gfi.world-automation.git`
 
 - Limpar e instalar todas as dependências (pom.xml):
 
@@ -74,9 +74,9 @@ Antes de rodar os testes siga os passos abaixo:
 Exemplo dos valores abaixo:
 
 ```
-BASE_URL=https://gfi.world/pt-pt
-CARREIRAS_URL=https://gfi.world/pt-pt/carreiras
-PARCEIROS_URL=https://gfi.world/pt-pt/parceiros
+BASE_URL=https://com.gfi.com.gfi.world/pt-pt
+CARREIRAS_URL=https://com.gfi.com.gfi.world/pt-pt/carreiras
+PARCEIROS_URL=https://com.gfi.com.gfi.world/pt-pt/parceiros
 ```
 ###### Nota²:
 Como boa prática por questão de segurança, esses dados poderiam ser considerados sensíveis por isso é interessante não expormos no código.
@@ -104,7 +104,7 @@ $ mvn test -DCucumber.options="--tags '@example'"
 
 > rodar os testes via IDE (IntelliJ)
 
-Clicar com o botão direito no projeto/class **gfi-world-automation/web > Run 'AllTests'** ou **CTRL+F5**
+Clicar com o botão direito no projeto/class **com.gfi-com.gfi.world-automation/web > Run 'AllTests'** ou **CTRL+F5**
 
 ## Report
 Após a etapa de testes, será criada uma pasta chamada `allure-results` e diversos arquivos **.json** dentro.

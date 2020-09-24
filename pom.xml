@@ -5,26 +5,24 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gfi.world.automation</groupId>
-    <artifactId>gfi-world-automation</artifactId>
+    <artifactId>com.gfi-com.gfi.world-automation</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>gfi-world-automation-sample</name>
-    <description>sample project for api and web in Java</description>
+    <name>com.gfi-com.gfi.world-automation-sample</name>
+    <description>sample project for web with Java</description>
 
     <properties>
-        <gson.version>2.8.6</gson.version>
         <junit.version>4.13</junit.version>
-        <commons.version>2.7</commons.version>
         <aspectj.version>1.9.5</aspectj.version>
         <cucumber.version>1.2.5</cucumber.version>
         <selenium.version>3.141.59</selenium.version>
         <allure.maven.version>2.10.0</allure.maven.version>
         <allure.cucumber.version>2.7.0</allure.cucumber.version>
-        <maven.surefire.version>2.22.1</maven.surefire.version>
+        <maven.plugin.version>2.22.2</maven.plugin.version>
         <slf4j.version>1.6.2</slf4j.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.source.version>1.8</maven.source.version>
         <maven.target.version>1.8</maven.target.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -72,6 +70,11 @@
             <version>${slf4j.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -79,7 +82,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven.surefire.version}</version>
+                <version>${maven.plugin.version}</version>
                 <configuration>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
@@ -94,7 +97,7 @@
                     </systemProperties>
                     <systemPropertyVariables>
                         <environment>${browser}</environment>
-                        <environment>${urlGitHub}</environment>
+                        <environment>${baseURL}</environment>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
