@@ -94,11 +94,6 @@ $ mvn clean test
 $ mvn clean -Dtest=CucumberRunnerTest test
 ```
 
-> rodar os testes escolhendo um navegador (ex: Chrome)
-```
-$ mvn clean test -Dbrowsers=CHROME
-```
-
 > rodar os testes com cucumber através de uma tag (ex: tag @exemplo)
 ```
 $ mvn test -DCucumber.options="--tags '@exemplo'"
@@ -106,7 +101,7 @@ $ mvn test -DCucumber.options="--tags '@exemplo'"
 
 > rodar os testes via IDE (IntelliJ)
 
-Clicar com o botão direito no projeto/class **com.gfi-com.gfi.world-automation/web > Run 'AllTests'** ou **CTRL+F5**
+Clicar com o botão direito no projeto/class **gfi.world-automation > Run 'AllTests'** ou **CTRL+F5**
 
 ## Report
 Após a etapa de testes, será criada uma pasta chamada `allure-results` e diversos arquivos **.json** dentro.
