@@ -1,6 +1,6 @@
 #language: pt
 
-@example
+@exemplo
 Funcionalidade: Carreiras do Gfi World
   Como um QA
   Gostaria de automatizar o site gfi-world

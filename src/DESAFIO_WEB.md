@@ -28,7 +28,6 @@ Repositório para testes automáticos para WEB.
 - [Instalar JDK 8+](https://www.oracle.com/java/technologies/javase-downloads.html)
 - [Instalar Maven](https://maven.apache.org/install.html)
 - [Instalar IntelliJ ou outra IDE](https://www.jetbrains.com/idea/download/)
-- [Exemplo com restassured](https://github.com/rest-assured/rest-assured/wiki/GettingStarted)
 - [Exemplo com selenium](https://medium.com/@mlvandijk/getting-started-with-cucumber-in-java-a-10-minute-tutorial-586652d2c82)
 
 ## Configuração
@@ -69,19 +68,18 @@ Criar um projeto _maven_ ou usar o arquivo _pom.xml_ para fazer o download/insta
 
 ## Como testar
 
-Antes de rodar os testes siga os passos abaixo:
+Antes de rodar os testes sigam os passos abaixo:
 
 - Criar um arquivo `config.properties` dentro da pasta *resources*
 - Inserir dados válidos
 
 ###### Nota¹: seguir o exemplo do arquivo: `config.properties.example`
-Exemplo dos valores abaixo:
+Exemplo dos dados abaixo:
 
 ```
 BASE_URL=https://com.gfi.com.gfi.world/pt-pt
-CARREIRAS_URL=https://com.gfi.com.gfi.world/pt-pt/carreiras
-PARCEIROS_URL=https://com.gfi.com.gfi.world/pt-pt/parceiros
 ```
+
 ###### Nota²:
 Como boa prática por questão de segurança, esses dados poderiam ser considerados sensíveis por isso é interessante não expormos no código.
 Então, o projeto ignora o arquivo de config (via .gitignore). Basta cria-lo antes de rodar.
@@ -101,9 +99,9 @@ $ mvn clean -Dtest=CucumberRunnerTest test
 $ mvn clean test -Dbrowsers=CHROME
 ```
 
-> rodar os testes com cucumber através de uma tag (ex: tag @example)
+> rodar os testes com cucumber através de uma tag (ex: tag @exemplo)
 ```
-$ mvn test -DCucumber.options="--tags '@example'"
+$ mvn test -DCucumber.options="--tags '@exemplo'"
 ```
 
 > rodar os testes via IDE (IntelliJ)
