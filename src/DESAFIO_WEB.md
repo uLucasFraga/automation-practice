@@ -7,7 +7,9 @@ Repositório para testes automáticos para WEB.
 
 ---
 
-##### status: ![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg?branch=develop)
+##### status:
+
+![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg?branch=develop)
 
 ## Índice sobre o projeto:
 
