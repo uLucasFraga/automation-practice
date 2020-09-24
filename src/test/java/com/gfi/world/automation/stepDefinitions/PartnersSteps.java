@@ -15,6 +15,7 @@ public class PartnersSteps {
     partnerPage = new PartnersPage();
   }
 
+  /* =========================ENTÃO========================= */
   @Então("^ele verifica que a lista de parceiros foi exibida com sucesso$")
   public void eleVerificaQueAListaDeParceirosFoiExibidaComSucesso() {
     assertTrue(partnerPage.verifyPartnersList());
