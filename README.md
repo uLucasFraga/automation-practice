@@ -2,9 +2,11 @@
 
 ## Índice sobre o projeto:
 
-> Índice [README:](https://github.com/uLucasFraga/com.gfi-com.gfi.world-automation/blob/master/README.md)
+> Índice [README:](https://github.com/uLucasFraga/gfi-world-automation/blob/master/README.md)
 
-1. [DESAFIO_WEB](https://github.com/uLucasFraga/com.gfi-com.gfi.world-automation/blob/master/web/DESAFIO_WEB.md)
+1. [DESAFIO_WEB](https://github.com/uLucasFraga/gfi-world-automation/blob/master/DESAFIO_WEB.md)
+
+### status do projeto: ![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg?branch=master)
 
 ---
 

@@ -165,6 +165,7 @@ fabric.properties
 # Cache file creation bug
 # See https://youtrack.jetbrains.com/issue/JBR-2257
 .idea/$CACHE_FILE$
+.idea
 
 ### Java ###
 # Compiled class file
