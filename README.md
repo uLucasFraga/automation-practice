@@ -13,7 +13,9 @@
 ---
 
 ### Resumo:
-Esse repositório não tem intenção alguma de se tornar algo profissional.
+Iniciei o repositório com nome gringo mas tentarei fazer o máximo possível em **pt-BR**
+
+Vale ressaltar que esse repositório não tem intenção alguma de se tornar algo profissional.
 
 **Funcionará apenas para conhecimento geral, servindo como um conteúdo para estudos, _testes_ e o crescimento compartilhado de todos.**
 
@@ -28,11 +30,11 @@ Logo, será super bem-vindo os pontos abaixo:
 
 ### Contato:
 
-_**email:** lucas.fragaa@gmail.com
+**email:** lucas.fragaa@gmail.com
 
-_**twitter:** https://twitter.com/ulucasfraga
+**twitter:** https://twitter.com/ulucasfraga
 
-_**linkedin:** https://www.linkedin.com/in/ulucasfraga/
+**linkedin:** https://www.linkedin.com/in/ulucasfraga/
 
 
 beijo nas crianças! :nerd_face: :black_heart:	
