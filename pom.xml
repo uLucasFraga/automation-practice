@@ -17,11 +17,12 @@
         <selenium.version>3.141.59</selenium.version>
         <allure.maven.version>2.10.0</allure.maven.version>
         <allure.cucumber.version>2.7.0</allure.cucumber.version>
+        <maven.clean.version>3.1.0</maven.clean.version>
         <maven.plugin.version>2.22.2</maven.plugin.version>
-        <slf4j.version>1.6.2</slf4j.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.source.version>1.8</maven.source.version>
         <maven.target.version>1.8</maven.target.version>
+        <slf4j.version>1.6.2</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -108,6 +109,32 @@
                 <configuration>
                     <reportVersion>2.5.0</reportVersion>
                     <resultsDirectory>${soapui.results.directory}</resultsDirectory>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>${maven.clean.version}</version>
+                <configuration>
+                    <excludeDefaultDirectories>true</excludeDefaultDirectories>
+                    <filesets>
+                        <fileset>
+                            <directory>${project.basedir}/allure-results</directory>
+                            <followSymlinks>false</followSymlinks>
+                            <useDefaultExcludes>true</useDefaultExcludes>
+                            <excludes>
+                                <exclude>${project.basedir}/allure-results</exclude>
+                            </excludes>
+                        </fileset>
+                        <fileset>
+                            <directory>${project.basedir}/allure-report</directory>
+                            <followSymlinks>false</followSymlinks>
+                            <useDefaultExcludes>true</useDefaultExcludes>
+                            <excludes>
+                                <exclude>${project.basedir}/allure-report</exclude>
+                            </excludes>
+                        </fileset>
+                    </filesets>
                 </configuration>
             </plugin>
             <plugin>
