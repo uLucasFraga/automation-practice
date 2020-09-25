@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Drivers {
-
   public static WebDriver criarDriver(String mvnParametro) {
     if (mvnParametro == null) {
       System.setProperty(
@@ -16,7 +15,7 @@ public class Drivers {
               .pegarCaminhoDrivers()
               .concat(Browsers.CHROME_LINUX.pegarExecutavel()));
       ChromeOptions opcao = new ChromeOptions();
-      opcao.addArguments("--start-maximized", "--disable-gpu", "--no-sandbox");
+      opcao.addArguments("--start-maximized", "--disable-gpu", "--headless", "--no-sandbox");
       return new ChromeDriver(opcao);
     }
 
