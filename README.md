@@ -1,38 +1,37 @@
-# GFI-WORLD-AUTOMATION
+# AUTOMATION PRACTICE [pt-BR]
 
 ## Índice sobre o projeto:
 
-> Índice [README:](https://github.com/uLucasFraga/gfi-world-automation/blob/master/README.md)
+> Índice [README:](https://github.com/uLucasFraga/automation-practice/blob/master/README.md)
 
-1. [DESAFIO_WEB](https://github.com/uLucasFraga/gfi-world-automation/blob/master/src/DESAFIO_WEB.md)
+1. [WEB](https://github.com/uLucasFraga/automation-practice/blob/master/src/WEB.md)
 
 ##### status:
 
-![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg)
+![TEST CI/CD](https://github.com/uLucasFraga/automation-practice/workflows/TEST%20CI/CD/badge.svg)
 
 ---
 
-### Instruções:
-Os testes deverão ser implementados em ferramenta escolhida por ti (por ex. Robot framework, selenium, UFT…).
+### Resumo:
+Esse repositório não tem intenção alguma de se tornar algo profissional.
 
-#### Descrição
-Queremos efetuar alguns testes de forma a validarmos que está tudo ok no site: `https://gfi.world/pt-pt/`
+Funcionará apenas para conhecimento geral, servindo como um conteúdo para estudos, **testes** e o crescimento compartilhado de todos.
 
- 
-> User Story: Carreiras
+Logo, será super bem-vindo os pontos abaixo:
 
-Como utilizador quero garantir que as ofertas estão disponíveis no site.
+```
+- Sugestões
+- PRs
+- Forks
+- Qualquer coisa!
+```
 
-Adicionalmente quero também saber quantas oportunidades de emprego existem e as suas áreas.
+### Contato:
 
-> User Story: Parceiros
+**email:** lucas.fragaa@gmail.com
+**twitter:** https://twitter.com/ulucasfraga
+**linkedin:** https://www.linkedin.com/in/ulucasfraga/
 
-Como utilizador quero garantir que os parceiros estão disponíveis no site.
-
-Adicionalmente quero também saber quantos parceiros existem.
-
-
-### Resumo: 
-O objetivo é demonstrares os resultados na conversa da próxima segunda-feira.
+beijo nas crianças! :nerd_face: :black_heart:	
 
 ---
