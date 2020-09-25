@@ -1,6 +1,6 @@
-# DESAFIO-WEB
+# TESTES-WEB
 
-Repositório para testes automáticos para WEB.
+Repositório para testes automatizados para WEB.
 - WEB: selenium, cucumber, junit e allure
 
 > Testando e validando navegadores com selenium em java: [SELENIUM](https://github.com/SeleniumHQ/selenium)
@@ -9,12 +9,12 @@ Repositório para testes automáticos para WEB.
 
 ##### status:
 
-![TEST CI/CD](https://github.com/uLucasFraga/gfi-world-automation/workflows/TEST%20CI/CD/badge.svg)
+![TEST CI/CD](https://github.com/uLucasFraga/automation/workflows/TEST%20CI/CD/badge.svg)
 
 
 ## Índice sobre o projeto:
 
-> Índice [README:](https://github.com/uLucasFraga/gfi-world-automation/blob/master/README.md)
+> Índice [README:](https://github.com/uLucasFraga/automation-practice/blob/master/README.md)
 
 - [Pre-requisitos](#pre-requisitos)
 - [Configuração](#configuração)
@@ -35,9 +35,9 @@ Repositório para testes automáticos para WEB.
 
 > variáveis de ambientes e bash_profile - exemplos:
 
-###### java: `export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home`
+###### java: `export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk{sua_versão_aqui}.jdk/Contents/Home`
 
-###### maven: `export PATH=/opt/apache-maven-3.5.3/bin:$PATH`
+###### maven: `export PATH=/opt/apache-maven-{sua_versão_aqui}/bin:$PATH`
 
 ##### Instalar Java
 - Mac, Windows e Linux: https://www.liquidweb.com/kb/how-to-install-java-on-ubuntu-windows-and-macos
@@ -45,7 +45,7 @@ Repositório para testes automáticos para WEB.
 ##### Instalar Maven
 - Mac, Windows e Linux: https://www.baeldung.com/install-maven-on-windows-linux-mac
 
-Criar um projeto _maven_ ou usar o arquivo _pom.xml_ para fazer o download/instalar as dependências
+Criar um projeto _maven_ ou usar o arquivo _pom.xml_ para fazer o download e instalar as dependências.
 
 ## Instalação
 
@@ -53,7 +53,7 @@ Criar um projeto _maven_ ou usar o arquivo _pom.xml_ para fazer o download/insta
 
 - Clonar esse repositório localmente usando http ou ssh, por exemplo:
 
-`git clone https://github.com/uLucasFraga/gfi-world-automation.git`
+`git clone https://github.com/uLucasFraga/automation-practice.git`
 
 - Limpar e instalar todas as dependências (pom.xml):
 
@@ -65,7 +65,7 @@ Criar um projeto _maven_ ou usar o arquivo _pom.xml_ para fazer o download/insta
 
 > Dicas
 
-- Use o pom.xml para fazer download de suas novas libs para manter o projeto rodando via terminal
+- Use o pom.xml para fazer download de sua nova lib para manter o projeto rodando via terminal
 
 ## Como testar
 
@@ -78,11 +78,11 @@ Antes de rodar os testes sigam os passos abaixo:
 Exemplo dos dados abaixo:
 
 ```
-BASE_URL=https://com.gfi.com.gfi.world/pt-pt
+BASE_URL=http://automationpractice.com
 ```
 
 ###### Nota²:
-Como boa prática por questão de segurança, esses dados poderiam ser considerados sensíveis por isso é interessante não expormos no código.
+Como boa prática por questão de segurança e exercícios, esses dados poderiam ser considerados sensíveis por isso é interessante não expormos no código.
 Então, o projeto ignora o arquivo de config (via .gitignore). Basta cria-lo antes de rodar.
 
 > rodar todos os testes com o maven
@@ -95,34 +95,35 @@ $ mvn clean test
 $ mvn clean -Dtest=CucumberRunnerTest test
 ```
 
-> rodar os testes com cucumber através de uma tag (ex: tag @exemplo)
+> rodar os testes com cucumber através de uma tag (ex: tag @regressao)
 ```
-$ mvn test -DCucumber.options="--tags '@exemplo'"
+$ mvn test -DCucumber.options="--tags '@regressao'"
 ```
 
 > rodar os testes via IDE (IntelliJ)
 
-Clicar com o botão direito no projeto/class **gfi.world-automation > Run 'AllTests'** ou **CTRL+F5**
+Clicar com o botão direito no projeto/class **automation-practice > Run 'AllTests'** ou **CTRL+F5**
 
 ## Report
 Após a etapa de testes, será criada uma pasta chamada `allure-results` e diversos arquivos **.json** dentro.
-Para visualizarmos o "**report**" com as métricas de testes do **Allure**, devemos baixar o `allure command line tool` para facilitar.
+Para visualizarmos o "**report**" com as métricas de testes do **Allure**, temos duas opções:
 
-- [Allure command line](https://github.com/etki/allure-cli)
+1 - através do plugin maven-allure, rodarmos o seguinte comando: `mvn allure:serve`
 
-Depois de baixado, basta usarmos o comando: `allure serve allure-results` e vermos o servidor do **Allure** subindo com as métricas.
-
-###### Nota³:
-Os arquivos **.json** são gerados sempre que algum teste é rodado.
-
-Então, para não metrificar os testes desnecessários, basta rodarmos o comando `mvn clean` antes de qualquer comando.
-
-Exemplo:
+> exemplo_com_maven_allure:
 ```
-mvn clean test-compile -Dit.test=AllRegressionIT verify -DskipUTs=true
-allure serve allure-results
+mvn clean test
+mvn allure:serveallure serve allure-results
 ```
-O reporte do Allure subira-a automaticamente.
+
+2 - podemos baixar o [Allure command line](https://github.com/etki/allure-cli) e usarmos o comando: `allure serve allure-results`
+
+> exemplo_com_allure_command_line:
+```
+mvn clean test
+allure serve {pasta_do_allure_results}
+```
+O reporte do **Allure** subira-a automaticamente.
 
 --- 
 
@@ -131,4 +132,4 @@ O reporte do Allure subira-a automaticamente.
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2020 © <a href="https://www.linkedin.com/in/dtferreira/" target="_blank">Diogo Ferreira</a>.
+- Copyright 2020 © <a href="https://www.linkedin.com/in/ulucasfraga/" target="_blank">Lucas Fraga</a>.

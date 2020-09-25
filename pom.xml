@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.gfi.world.automation</groupId>
-    <artifactId>com.gfi-com.gfi.world-automation</artifactId>
+    <groupId>br.com.automation.practice</groupId>
+    <artifactId>automation-practice</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>com.gfi-com.gfi.world-automation-sample</name>
-    <description>sample project for web with Java</description>
+    <name>automation-practice-example</name>
+    <description>simples projeto em Java com maven, selenium, cucumber, junit e allure</description>
 
     <properties>
         <junit.version>4.13</junit.version>
