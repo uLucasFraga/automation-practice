@@ -15,7 +15,7 @@
 ### Resumo:
 Esse repositório não tem intenção alguma de se tornar algo profissional.
 
-Funcionará apenas para conhecimento geral, servindo como um conteúdo para estudos, **testes** e o crescimento compartilhado de todos.
+**Funcionará apenas para conhecimento geral, servindo como um conteúdo para estudos, _testes_ e o crescimento compartilhado de todos.**
 
 Logo, será super bem-vindo os pontos abaixo:
 
@@ -28,9 +28,12 @@ Logo, será super bem-vindo os pontos abaixo:
 
 ### Contato:
 
-**email:** lucas.fragaa@gmail.com
-**twitter:** https://twitter.com/ulucasfraga
-**linkedin:** https://www.linkedin.com/in/ulucasfraga/
+_**email:** lucas.fragaa@gmail.com
+
+_**twitter:** https://twitter.com/ulucasfraga
+
+_**linkedin:** https://www.linkedin.com/in/ulucasfraga/
+
 
 beijo nas crianças! :nerd_face: :black_heart:	
 
