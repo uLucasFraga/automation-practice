@@ -13,11 +13,13 @@
 ---
 
 ### Resumo:
-Iniciei o repositório com nome gringo mas tentarei fazer o máximo possível em **pt-BR**
+O nome do repositório é exatamente o nome do site em que iriamos brincar/testar
 
-Vale ressaltar que esse repositório não tem intenção alguma de se tornar algo profissional.
+Porém, a intenção será manter o máximo possível em **PT-BR** (mesmo que para alguns termos se torne estranho).
 
-**Funcionará apenas para conhecimento geral, servindo como um conteúdo para estudos, _testes_ e o crescimento compartilhado de todos.**
+Vale ressaltar que esse repositório não tem intenção de tornar algo profissional.
+
+**Funcionará apenas para conhecimento geral, servindo como um conteúdo de estudos, _testes_ e o crescimento compartilhado de todos.**
 
 Logo, será super bem-vindo os pontos abaixo:
 

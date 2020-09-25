@@ -1,6 +1,6 @@
-package com.gfi.world.automation.utils.commons;
+package br.com.automation.practice.utils.commons;
 
-import com.gfi.world.automation.enums.Browsers;
+import br.com.automation.practice.enums.Browsers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;

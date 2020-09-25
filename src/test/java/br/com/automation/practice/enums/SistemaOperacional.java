@@ -1,4 +1,4 @@
-package com.gfi.world.automation.enums;
+package br.com.automation.practice.enums;
 
 import java.io.File;
 

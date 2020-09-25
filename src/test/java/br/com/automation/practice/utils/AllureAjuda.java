@@ -1,6 +1,6 @@
-package com.gfi.world.automation.utils;
+package br.com.automation.practice.utils;
 
-import com.gfi.world.automation.utils.commons.Page;
+import br.com.automation.practice.utils.commons.PaginaBase;
 import cucumber.api.Scenario;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
@@ -12,7 +12,7 @@ import java.io.InputStream;
 public class AllureHelper {
 
   private static void screenShot(String status, Scenario scenario) {
-    byte[] screenshotBytes = ((TakesScreenshot) Page.getDriver()).getScreenshotAs(OutputType.BYTES);
+    byte[] screenshotBytes = ((TakesScreenshot) PaginaBase.getDriver()).getScreenshotAs(OutputType.BYTES);
     InputStream screenshotStream = new ByteArrayInputStream(screenshotBytes);
     Allure.addAttachment(scenario.getName() + " - " + status, screenshotStream);
   }

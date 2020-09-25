@@ -1,38 +1,31 @@
-package br.com.automation.practice.stepDefinitions;
+package br.com.automation.practice.steps;
 
-import br.com.automation.practice.pages.HomePage;
-import cucumber.api.PendingException;
+import br.com.automation.practice.pages.PaginaInicial;
 import cucumber.api.java.Before;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
-import cucumber.api.java.pt.Quando;
 
 import static br.com.automation.practice.utils.HandleProperties.getValue;
 import static org.junit.Assert.assertTrue;
 
-public class HomeSteps {
+public class PaginaInicialSteps {
 
-  private HomePage homePage;
+  private PaginaInicial paginaInicial;
 
   @Before
   public void setup() {
-    homePage = new HomePage();
+    paginaInicial = new PaginaInicial();
   }
 
   /* =========================DADO========================= */
   @Dado("^que ele acessa o site$")
   public void queEleAcessaOSite() {
-    homePage.visit(getValue("BASE_URL"));
+    paginaInicial.visitar(getValue("URL_BASE"));
   }
 
   /* =========================ENTÃO========================= */
   @Então("^ele verifica o texto \"([^\"]*)\" na página inicial$")
   public void eleVerificaOTextoNaPaginaInicial(String text) {
-    assertTrue(homePage.verifyHomePageText(text));
-  }
-  @Quando("^ele pesquisar por \"([^\"]*)\"$")
-  public void elePesquisarPor(String arg0) throws Throwable {
-    // Write code here that turns the phrase above into concrete actions
-    throw new PendingException();
+    assertTrue(paginaInicial.verificarTextoPaginaInicial(text));
   }
 }

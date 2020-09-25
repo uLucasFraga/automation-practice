@@ -1,4 +1,4 @@
-package com.gfi.world.automation.utils;
+package br.com.automation.practice.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,7 +10,7 @@ public class HandleProperties {
 
   private static Properties properties;
 
-  public static String getValue(String value) {
+  public static String pegarDados(String value) {
     try {
       if (properties == null) {
         HandleProperties.properties = new Properties();
