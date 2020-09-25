@@ -13,9 +13,13 @@
 ---
 
 ### Resumo:
-Esse repositório não tem intenção alguma de se tornar algo profissional.
+O nome do repositório é exatamente o nome do site em que iriamos brincar/testar
 
-**Funcionará apenas para conhecimento geral, servindo como um conteúdo para estudos, _testes_ e o crescimento compartilhado de todos.**
+Porém, a intenção será manter o máximo possível em **PT-BR** (mesmo que para alguns termos se torne estranho).
+
+Vale ressaltar que esse repositório não tem intenção de tornar algo profissional.
+
+**Funcionará apenas para conhecimento geral, servindo como um conteúdo de estudos, _testes_ e o crescimento compartilhado de todos.**
 
 Logo, será super bem-vindo os pontos abaixo:
 
@@ -28,11 +32,11 @@ Logo, será super bem-vindo os pontos abaixo:
 
 ### Contato:
 
-_**email:** lucas.fragaa@gmail.com
+**email:** lucas.fragaa@gmail.com
 
-_**twitter:** https://twitter.com/ulucasfraga
+**twitter:** https://twitter.com/ulucasfraga
 
-_**linkedin:** https://www.linkedin.com/in/ulucasfraga/
+**linkedin:** https://www.linkedin.com/in/ulucasfraga/
 
 
 beijo nas crianças! :nerd_face: :black_heart:	

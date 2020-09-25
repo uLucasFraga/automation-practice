@@ -1,11 +1,11 @@
 #language: pt
 
-@exemplo
-Funcionalidade: Acessar o Gif World
+@acessar @regressao
+Funcionalidade: Acessar o site "Automation Practice"
   Como um QA
-  Gostaria de automatizar o site gfi-world
-  De acordo com a etapa sugerida pelo processo seletivo
+  Gostaria de acessar o site do "automation-practice"
+  Para verificar o que for necessário conforme os cenários abaixo
 
-  Cenário: validar acesso ao site gfi world
-    Dado que ele acessa o site gfi-world
-    Então ele verifica o texto "Gfi, numa nova Era Digital" com sucesso
+  Cenário: validar acesso ao site
+    Dado que ele acessa o site
+    Então ele verifica o texto "Automation Practice Website" na página inicial
