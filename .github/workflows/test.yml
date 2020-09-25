@@ -1,6 +1,6 @@
 name: TEST CI/CD
 
-on: [push]
+on: [master]
 
 jobs:
   build:
