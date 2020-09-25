@@ -2,18 +2,18 @@ package br.com.automation.practice.enums;
 
 import java.io.File;
 
-public enum OperationSystems {
+public enum SistemaOperacional {
   LINUX_OS_X("drivers/linux/"),
   MAC_OS_X("drivers/mac/"),
   WINDOWS_OS_X("drivers/windows/");
 
-  private final String driverPath;
+  private final String caminhoDriver;
 
-  OperationSystems(String driverPath) {
-    this.driverPath = driverPath;
+  SistemaOperacional(String caminhoDriver) {
+    this.caminhoDriver = caminhoDriver;
   }
 
-  public String getDriversPath() {
-    return new File(driverPath).getAbsolutePath();
+  public String pegarCaminhoDrivers() {
+    return new File(caminhoDriver).getAbsolutePath();
   }
 }

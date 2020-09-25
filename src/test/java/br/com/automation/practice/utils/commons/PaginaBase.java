@@ -12,198 +12,199 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Page {
+public class PaginaBase {
 
-  private final long DEFAULT_TIME_WAIT = 10;
+  private final long TEMPO_PADRAO_ESPERA = 10;
 
-  public Page() {
+  public PaginaBase() {
     if (Browsers.webDriver == null) {
-      Browsers.setWebDriver();
+      Browsers.setarWebDriver();
     }
   }
 
-  public static WebDriver getDriver() {
+  public static WebDriver pegarDriver() {
     return Browsers.webDriver;
   }
 
-  protected void openUrl(String url) {
-    getDriver().get(url);
+  protected void abrirURL(String url) {
+    pegarDriver().get(url);
   }
 
-  protected String getUrl() {
-    return getDriver().getCurrentUrl();
+  protected String pegarURL() {
+    return pegarDriver().getCurrentUrl();
   }
 
-  protected boolean isUrlContainsValue(String text) {
-    return getUrl().contains(text);
+  protected boolean urlContemTexto(String texto) {
+    return pegarURL().contains(texto);
   }
 
-  protected WebElement waitElement(By locator) {
-    return new WebDriverWait(getDriver(), DEFAULT_TIME_WAIT)
-        .until(ExpectedConditions.presenceOfElementLocated(locator));
+  protected WebElement esperarElemento(By localizador) {
+    return new WebDriverWait(pegarDriver(), TEMPO_PADRAO_ESPERA)
+        .until(ExpectedConditions.presenceOfElementLocated(localizador));
   }
 
-  protected List<WebElement> waitElements(By locator) {
-    return new WebDriverWait(getDriver(), DEFAULT_TIME_WAIT)
-        .until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+  protected List<WebElement> esperarElementos(By localizador) {
+    return new WebDriverWait(pegarDriver(), TEMPO_PADRAO_ESPERA)
+        .until(ExpectedConditions.presenceOfAllElementsLocatedBy(localizador));
   }
 
-  protected boolean isVisible(By locator) {
-    new WebDriverWait(getDriver(), DEFAULT_TIME_WAIT)
-        .until(ExpectedConditions.visibilityOf(getElement(locator)));
-    return getElement(locator).isDisplayed();
+  protected boolean estaVisivel(By localizador) {
+    new WebDriverWait(pegarDriver(), TEMPO_PADRAO_ESPERA)
+        .until(ExpectedConditions.visibilityOf(pegarElemento(localizador)));
+    return pegarElemento(localizador).isDisplayed();
   }
 
-  protected boolean isNotVisible(By locator) {
-    return new WebDriverWait(getDriver(), DEFAULT_TIME_WAIT)
-        .until(ExpectedConditions.invisibilityOf(getElement(locator)));
+  protected boolean naoEstaVisivel(By localizador) {
+    return new WebDriverWait(pegarDriver(), TEMPO_PADRAO_ESPERA)
+        .until(ExpectedConditions.invisibilityOf(pegarElemento(localizador)));
   }
 
-  protected boolean isClickable(By locator) {
-    new WebDriverWait(getDriver(), DEFAULT_TIME_WAIT)
-        .until(ExpectedConditions.elementToBeClickable(getElement(locator)));
-    return getElement(locator).isDisplayed() && getElement(locator).isEnabled();
+  protected boolean estaClicavel(By localizador) {
+    new WebDriverWait(pegarDriver(), TEMPO_PADRAO_ESPERA)
+        .until(ExpectedConditions.elementToBeClickable(pegarElemento(localizador)));
+    return pegarElemento(localizador).isDisplayed() && pegarElemento(localizador).isEnabled();
   }
 
-  protected void waitForTextInElement(By locator, String textToBeWait) {
-    new WebDriverWait(getDriver(), DEFAULT_TIME_WAIT)
-        .until(ExpectedConditions.textToBe(locator, textToBeWait));
+  protected void esperarPorTextoNoElemento(By localizador, String textoEsperado) {
+    new WebDriverWait(pegarDriver(), TEMPO_PADRAO_ESPERA)
+        .until(ExpectedConditions.textToBe(localizador, textoEsperado));
   }
 
-  protected void waitForTextPresentInElement(By locator, String textToBeWait) {
-    new WebDriverWait(getDriver(), DEFAULT_TIME_WAIT)
-        .until(ExpectedConditions.textToBePresentInElement(getElement(locator), textToBeWait));
+  protected void esperarPorTextoPresenteNoElemento(By localizador, String textoEsperado) {
+    new WebDriverWait(pegarDriver(), TEMPO_PADRAO_ESPERA)
+        .until(
+            ExpectedConditions.textToBePresentInElement(pegarElemento(localizador), textoEsperado));
   }
 
-  protected void waitForElementToBeSelected(By locator) {
-    new WebDriverWait(getDriver(), DEFAULT_TIME_WAIT)
-        .until(ExpectedConditions.elementToBeSelected(getElement(locator)));
+  protected void esperarPorElementoEstarSelecionado(By localizador) {
+    new WebDriverWait(pegarDriver(), TEMPO_PADRAO_ESPERA)
+        .until(ExpectedConditions.elementToBeSelected(pegarElemento(localizador)));
   }
 
-  protected void waitElementInvisible(By locator) {
-    new WebDriverWait(getDriver(), DEFAULT_TIME_WAIT)
-        .until(ExpectedConditions.invisibilityOfElementLocated((locator)));
+  protected void esperarElementoNaoVisivel(By localizador) {
+    new WebDriverWait(pegarDriver(), TEMPO_PADRAO_ESPERA)
+        .until(ExpectedConditions.invisibilityOfElementLocated((localizador)));
   }
 
-  protected void countList(By locator, String message) {
-    isVisible(locator);
-    List<WebElement> list = getElements(locator);
-    System.out.println(message + list.size());
+  protected void contarUmaListagem(By localizador, String mensagem) {
+    estaVisivel(localizador);
+    List<WebElement> lista = pegarElementos(localizador);
+    System.out.println(mensagem + lista.size());
   }
 
-  protected void getListNames(By locator, String message) {
-    isVisible(locator);
-    List<WebElement> list_names = getElements(locator);
-    List<String> all_elements_text = new ArrayList<>();
-    for (WebElement element : list_names) {
-      all_elements_text.add(element.getText());
-      System.out.println(message + element.getText());
+  protected void pegarUmaListaDeNomes(By localizador, String mensagem) {
+    estaVisivel(localizador);
+    List<WebElement> lista_nomes = pegarElementos(localizador);
+    List<String> todos_elementos_lista = new ArrayList<>();
+    for (WebElement elemento : lista_nomes) {
+      todos_elementos_lista.add(elemento.getText());
+      System.out.println(mensagem + elemento.getText());
     }
   }
 
-  protected WebElement getElement(By locator) {
-    return waitElement(locator);
+  protected WebElement pegarElemento(By localizador) {
+    return esperarElemento(localizador);
   }
 
-  protected List<WebElement> getElements(By locator) {
-    return waitElements(locator);
+  protected List<WebElement> pegarElementos(By localizador) {
+    return esperarElementos(localizador);
   }
 
-  protected void fillInput(String datatype, By locator) {
-    isVisible(locator);
-    getElement(locator).clear();
-    this.waitForTextInElement(locator, "");
-    getElement(locator).sendKeys(datatype);
+  protected void preencherCampo(String texto, By localizador) {
+    estaVisivel(localizador);
+    pegarElemento(localizador).clear();
+    this.esperarPorTextoNoElemento(localizador, "");
+    pegarElemento(localizador).sendKeys(texto);
   }
 
-  protected void clickOn(By locator) {
-    isVisible(locator);
-    new Actions(getDriver()).moveToElement(getElement(locator)).perform();
-    getElement(locator).click();
+  protected void clicarMouse(By localizador) {
+    estaVisivel(localizador);
+    new Actions(pegarDriver()).moveToElement(pegarElemento(localizador)).perform();
+    pegarElemento(localizador).click();
   }
 
-  protected void clickElementByTextList(By list, By locator, String text) {
-    isElementAttachedToHtml(list);
-    List<WebElement> textList = new ArrayList<>(getElements(list));
-    for (WebElement element : textList) {
-      if (text.equals(getTextFromLabel(locator))) {
-        element.click();
+  protected void clicarElementoPeloTextoDeUmaLista(By lista, By localizador, String texto) {
+    estaVisivelNoHtml(lista);
+    List<WebElement> texto_lista = new ArrayList<>(pegarElementos(lista));
+    for (WebElement elemento : texto_lista) {
+      if (texto.equals(pegarTexto(localizador))) {
+        elemento.click();
         break;
       }
     }
   }
 
-  protected void click(By locator) {
-    isClickable(locator);
-    getElement(locator).click();
+  protected void clicar(By localizador) {
+    estaClicavel(localizador);
+    pegarElemento(localizador).click();
   }
 
-  protected void check(By locator) {
-    if (!getElement(locator).isSelected()) {
-      click(locator);
-      waitForChecked(locator);
+  protected void selecionarCheck(By localizador) {
+    if (!pegarElemento(localizador).isSelected()) {
+      clicar(localizador);
+      esperarCheckElemento(localizador);
     }
   }
 
-  protected void unCheck(By locator) {
-    if (getElement(locator).isSelected()) {
-      click(locator);
-      waitForNotChecked(locator);
+  protected void naoSelecionarCheck(By localizador) {
+    if (pegarElemento(localizador).isSelected()) {
+      clicar(localizador);
+      esperarNaoCheckElemento(localizador);
     }
   }
 
-  protected boolean waitForChecked(By locator) {
-    return getElement(locator).isSelected();
+  protected boolean esperarCheckElemento(By localizador) {
+    return pegarElemento(localizador).isSelected();
   }
 
-  protected boolean waitForNotChecked(By locator) {
-    return !getElement(locator).isSelected();
+  protected boolean esperarNaoCheckElemento(By localizador) {
+    return !pegarElemento(localizador).isSelected();
   }
 
-  protected boolean isVisibleOnMouse(By locator) {
-    isVisible(locator);
-    new Actions(getDriver()).moveToElement(getElement(locator)).perform();
-    return getElement(locator).isDisplayed();
+  protected boolean estaVisivelMouse(By localizador) {
+    estaVisivel(localizador);
+    new Actions(pegarDriver()).moveToElement(pegarElemento(localizador)).perform();
+    return pegarElemento(localizador).isDisplayed();
   }
 
-  protected String getTitle() {
-    return getTitle().trim();
+  protected String pegarTitulo() {
+    return pegarTitulo().trim();
   }
 
-  protected String getTextFromLabel(By locator) {
-    return getElement(locator).getText().trim();
+  protected String pegarTexto(By localizador) {
+    return pegarElemento(localizador).getText().trim();
   }
 
-  protected String getAttributeFromLabel(By locator, String value) {
-    return getElement(locator).getAttribute(value);
+  protected String pegarAtributo(By localizador, String dado) {
+    return pegarElemento(localizador).getAttribute(dado);
   }
 
-  protected String getTextOfVisibleElement(WebElement element) {
-    String text = null;
+  protected String pegarTextoVisivelElemento(WebElement elemento) {
+    String texto = null;
     try {
-      text = element.getText().trim();
+      texto = elemento.getText().trim();
     } catch (Exception e) {
-      System.out.println(element + " : " + e);
+      System.out.println(elemento + " : " + e);
     }
-    return text;
+    return texto;
   }
 
-  protected boolean isElementAttachedToHtml(By locator) {
+  protected boolean estaVisivelNoHtml(By localizador) {
     try {
-      waitElement(locator);
+      esperarElemento(localizador);
       return true;
     } catch (Exception e) {
       return false;
     }
   }
 
-  protected void pressTab(By locator) {
-    isVisible(locator);
-    getElement(locator).sendKeys(Keys.TAB);
+  protected void apertarTAB(By localizador) {
+    estaVisivel(localizador);
+    pegarElemento(localizador).sendKeys(Keys.TAB);
   }
 
-  protected void pressEnter(By locator) {
-    isVisible(locator);
-    getElement(locator).sendKeys(Keys.ENTER);
+  protected void apertarENTER(By localizador) {
+    estaVisivel(localizador);
+    pegarElemento(localizador).sendKeys(Keys.ENTER);
   }
 }

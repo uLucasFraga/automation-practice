@@ -1,6 +1,6 @@
-package br.com.automation.practice.stepDefinitions;
+package br.com.automation.practice.steps;
 
-import br.com.automation.practice.paginas.PesquisaPaginaBase;
+import br.com.automation.practice.pages.PesquisaPaginaBase;
 import cucumber.api.java.Before;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -12,7 +12,7 @@ public class PesquisaSteps {
   private PesquisaPaginaBase pesquisaPage;
 
   @Before
-  public void setup() {
+  public void iniciar() {
     pesquisaPage = new PesquisaPaginaBase();
   }
 
@@ -25,7 +25,7 @@ public class PesquisaSteps {
   /* =========================ENTÃO========================= */
   @Então("^ele verifica que a pesquisa por \"([^\"]*)\" foi feita com sucesso$")
   public void eleVerificaQueAPesquisaPorFoiFeitaComSucesso(String produto) {
-    assertTrue(pesquisaPage.verificarValido(produto));
+    assertTrue(pesquisaPage.verificarPesquisaValida(produto));
   }
 
   @Então("^ele verifica que existem produtos pela mensagem: \"([^\"]*)\"$")
@@ -35,6 +35,6 @@ public class PesquisaSteps {
 
   @Então("^ele verifica que o produto não existe pela mensagem: \"([^\"]*)\"$")
   public void eleVerificaQueOProdutoNaoExistePelaMensagem(String mensagem) {
-    assertTrue(pesquisaPage.verificarInvalido(mensagem));
+    assertTrue(pesquisaPage.verificarPesquisaInvalida(mensagem));
   }
 }

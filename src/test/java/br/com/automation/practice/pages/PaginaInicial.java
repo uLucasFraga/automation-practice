@@ -1,6 +1,6 @@
-package br.com.automation.practice.paginas;
+package br.com.automation.practice.pages;
 
-import br.com.automation.practice.utils.HandleProperties;
+import br.com.automation.practice.utils.ManipularPropriedades;
 import br.com.automation.practice.utils.commons.PaginaBase;
 import org.openqa.selenium.By;
 
@@ -12,9 +12,9 @@ public class PaginaInicial extends PaginaBase {
     String urlBase =
         System.getProperty("urlBase") != null
             ? System.getProperty("urlBase")
-            : HandleProperties.getValue("URL_BASE");
-    openUrl(urlBase);
-    isUrlContainsValue(url);
+            : ManipularPropriedades.pegarDados("URL_BASE");
+    abrirURL(urlBase);
+    urlContemTexto(url);
   }
 
   public boolean verificarTextoPaginaInicial(String texto) {

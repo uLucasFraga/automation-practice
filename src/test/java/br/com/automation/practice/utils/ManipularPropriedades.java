@@ -4,23 +4,23 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class HandleProperties {
+public class ManipularPropriedades {
 
-  private static final String PROPERTIES = "./src/test/resources/config.properties";
+  private static final String PROPRIEDADES = "./src/test/resources/config.properties";
 
-  private static Properties properties;
+  private static Properties propriedades;
 
-  public static String pegarDados(String value) {
+  public static String pegarDados(String dado) {
     try {
-      if (properties == null) {
-        HandleProperties.properties = new Properties();
-        HandleProperties.properties.load(new FileInputStream(PROPERTIES));
+      if (propriedades == null) {
+        ManipularPropriedades.propriedades = new Properties();
+        ManipularPropriedades.propriedades.load(new FileInputStream(PROPRIEDADES));
       }
 
     } catch (IOException e) {
       e.printStackTrace();
     }
 
-    return HandleProperties.properties.getProperty(value);
+    return ManipularPropriedades.propriedades.getProperty(dado);
   }
 }

@@ -1,4 +1,4 @@
-package br.com.automation.practice.paginas;
+package br.com.automation.practice.pages;
 
 import br.com.automation.practice.utils.commons.PaginaBase;
 import org.openqa.selenium.By;
@@ -11,15 +11,15 @@ public class PesquisaPaginaBase extends PaginaBase {
   private final By RESULTADO_PRODUTOS_VALIDO = By.className("heading-counter");
 
   public void pesquisar(String texto) {
-    fillInput(texto, INPUT_PESQUISA);
-    pressEnter(INPUT_PESQUISA);
+    preencherCampo(texto, INPUT_PESQUISA);
+    apertarENTER(INPUT_PESQUISA);
   }
 
-  public boolean verificarValido(String texto) {
+  public boolean verificarPesquisaValida(String texto) {
     return pegarTexto(RESULTADO_PESQUISA_VALIDA).equals(texto);
   }
 
-  public boolean verificarInvalido(String texto) {
+  public boolean verificarPesquisaInvalida(String texto) {
     return pegarTexto(RESULTADO_PESQUISA_INVALIDA).contains(texto);
   }
 

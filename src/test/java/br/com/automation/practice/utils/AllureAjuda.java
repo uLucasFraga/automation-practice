@@ -9,20 +9,21 @@ import org.openqa.selenium.TakesScreenshot;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
-public class AllureHelper {
+public class AllureAjuda {
 
-  private static void screenShot(String status, Scenario scenario) {
-    byte[] screenshotBytes = ((TakesScreenshot) PaginaBase.getDriver()).getScreenshotAs(OutputType.BYTES);
+  private static void screenShot(String status, Scenario cenario) {
+    byte[] screenshotBytes =
+        ((TakesScreenshot) PaginaBase.pegarDriver()).getScreenshotAs(OutputType.BYTES);
     InputStream screenshotStream = new ByteArrayInputStream(screenshotBytes);
-    Allure.addAttachment(scenario.getName() + " - " + status, screenshotStream);
+    Allure.addAttachment(cenario.getName() + " - " + status, screenshotStream);
   }
 
-  public static void saveScreenshotOfScenario(Scenario scenario) {
-    if (!scenario.isFailed()) {
-      screenShot("PASSED", scenario);
+  public static void salvarScreenshotDoCenario(Scenario cenario) {
+    if (!cenario.isFailed()) {
+      screenShot("SUCESSO", cenario);
 
     } else {
-      screenShot("FAILED", scenario);
+      screenShot("FALHA", cenario);
     }
   }
 }

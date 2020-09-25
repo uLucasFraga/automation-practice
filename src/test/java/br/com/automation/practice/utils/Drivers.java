@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-public class FabricaDriver {
+public class Drivers {
 
   public static WebDriver criarDriver(String mvnParametro) {
     if (mvnParametro == null) {
@@ -25,7 +25,7 @@ public class FabricaDriver {
       String tipoBrowser = pegarTipoBrowserPeloParametro(mvnParametro);
       System.setProperty(
           tipoBrowser,
-          pegarCaminhoDriver(soNome).concat(getFullExecutableNameFromParameter(mvnParametro)));
+          pegarCaminhoDriver(soNome).concat(pegarNomeCompletoExecutavelParametro(mvnParametro)));
     } catch (Exception e) {
       System.out.println("ERRO: Por favor, selecione um browser válido para o teste.");
       Browsers.mostrarOpcoesValidasDosBrowsers();
@@ -51,7 +51,7 @@ public class FabricaDriver {
     return System.getProperty("os.name");
   }
 
-  private static String getFullExecutableNameFromParameter(String mvnParameter) {
-    return Browsers.valueOf(mvnParameter).pegarExecutavel();
+  private static String pegarNomeCompletoExecutavelParametro(String mvnParametro) {
+    return Browsers.valueOf(mvnParametro).pegarExecutavel();
   }
 }
