@@ -125,6 +125,10 @@ allure serve {pasta_do_allure_results}
 ```
 O reporte do **Allure** subira-a automaticamente.
 
+###### Nota³:
+Os arquivos **.json** são gerados sempre que algum teste é "rodado".
+Então, caso prefira utilizar o allure_command_line, rode antes o comando `mvn clean` para limpar a pasta e metrificar corretamente.
+
 --- 
 
 ## Licença
