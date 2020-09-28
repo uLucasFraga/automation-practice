@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  configurar-projeto:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,8 +21,7 @@ jobs:
         java-version: ${{ matrix.java-version }}
     - name: instalar dependências
       run: mvn clean install -DskipTests
-
-  lint:
+  checkar-style-code:
     steps:
     - name: checkstyle do projeto
       uses: maximbircu/pull-request-checkstyle@v1.0.0
@@ -33,6 +32,6 @@ jobs:
         branch-name-regex: ".*"
         branch-name-min-length: 20
         branch-name-max-length: 72
-    testes:
+  testar-web:
       - name: rodar testes e2e
         run: mvn clean test
