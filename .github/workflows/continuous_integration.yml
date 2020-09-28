@@ -20,17 +20,15 @@ jobs:
         with:
           java-version: ${{ matrix.java-version }}
   configurar:
-    needs: build
+    runs-on: ubuntu-latest
     steps:
       - name: instalar dependências
         run: mvn clean install -DskipTests
   lint:
-    needs: build
     steps:
       - name: checkstyle code - google
         run: mvn checkstyle:checkstyle
   testes:
-    needs: build
     steps:
       - name: rodar testes e2e
         run: mvn clean test
