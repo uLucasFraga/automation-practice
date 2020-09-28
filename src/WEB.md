@@ -14,7 +14,7 @@ Repositório para testes automatizados para WEB.
 
 ## Índice sobre o projeto:
 
-> Índice [README:](https://github.com/uLucasFraga/automation-practice/blob/master/README.md)
+> Índice [README:](https://github.com/uLucasFraga/automation-practice/blob/main/README.md)
 
 - [Pre-requisitos](#pre-requisitos)
 - [Configuração](#configuração)

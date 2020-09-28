@@ -2,14 +2,14 @@
 
 ## Índice sobre o projeto:
 
-> Índice [README:](https://github.com/uLucasFraga/automation-practice/blob/master/README.md)
+> Índice [README:](https://github.com/uLucasFraga/automation-practice/blob/main/README.md)
 
-1. [WEB](https://github.com/uLucasFraga/automation-practice/blob/master/src/WEB.md)
+1. [WEB](https://github.com/uLucasFraga/automation-practice/blob/main/src/WEB.md)
 
 
 ##### status:
 
-[![CONTINUOUS INTEGRATION](https://github.com/uLucasFraga/automation-practice/workflows/CONTINUOUS%20INTEGRATION/badge.svg?branch=master)](https://github.com/uLucasFraga/automation-practice/actions)
+[![CONTINUOUS INTEGRATION](https://github.com/uLucasFraga/automation-practice/workflows/CONTINUOUS%20INTEGRATION/badge.svg?branch=main)](https://github.com/uLucasFraga/automation-practice/actions)
 
 ---
 
