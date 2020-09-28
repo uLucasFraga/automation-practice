@@ -25,10 +25,12 @@ jobs:
       - name: instalar dependências
         run: mvn clean install -DskipTests
   lint:
+    runs-on: ubuntu-latest
     steps:
       - name: checkstyle code - google
         run: mvn checkstyle:checkstyle
   testes:
+    runs-on: ubuntu-latest
     steps:
       - name: rodar testes e2e
         run: mvn clean test
