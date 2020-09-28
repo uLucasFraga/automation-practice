@@ -14,19 +14,23 @@ jobs:
       matrix:
         java-version: [8]
     steps:
-    - uses: actions/checkout@v2
-    - name: configurar JDK ${{ matrix.java-version }}
-      uses: actions/setup-java@v1
-      with:
-        java-version: ${{ matrix.java-version }}
-    configuração:
-    - name: instalar dependências
-      run: mvn clean install -DskipTests
+      - uses: actions/checkout@v2
+      - name: configurar JDK ${{ matrix.java-version }}
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ matrix.java-version }}
+  configurar:
+    needs: build
+    steps:
+      - name: instalar dependências
+        run: mvn clean install -DskipTests
   lint:
+    needs: build
     steps:
-    - name: checkstyle code - google
-      run: mvn checkstyle:checkstyle
+      - name: checkstyle code - google
+        run: mvn checkstyle:checkstyle
   testes:
+    needs: build
     steps:
-    - name: rodar testes e2e
-      run: mvn clean test
+      - name: rodar testes e2e
+        run: mvn clean test
