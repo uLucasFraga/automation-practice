@@ -21,8 +21,6 @@ jobs:
         java-version: ${{ matrix.java-version }}
     - name: instalar dependências
       run: mvn clean install -DskipTests
-  checkar-style-code:
-    steps:
     - name: checkstyle do projeto
       uses: maximbircu/pull-request-checkstyle@v1.0.0
       with:
@@ -32,7 +30,5 @@ jobs:
         branch-name-regex: ".*"
         branch-name-min-length: 20
         branch-name-max-length: 72
-  testar-web:
-    steps:
     - name: rodar testes e2e
       run: mvn clean test
