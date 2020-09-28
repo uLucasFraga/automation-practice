@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  configurar-projeto:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -19,7 +19,14 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: ${{ matrix.java-version }}
+    configuração:
     - name: instalar dependências
       run: mvn clean install -DskipTests
+  lint:
+    steps:
+    - name: checkstyle code - google
+      run: mvn checkstyle:checkstyle
+  testes:
+    steps:
     - name: rodar testes e2e
       run: mvn clean test
