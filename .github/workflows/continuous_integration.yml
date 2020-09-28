@@ -1,26 +1,27 @@
-name: TEST CI/CD
+name: CONTINUOUS INTEGRATION
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ master, develop ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 jobs:
-  build:
-
+  configurar_e_testar:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         java-version: [8]
-
     steps:
       - uses: actions/checkout@v2
-      - name: Set up JDK ${{ matrix.java-version }}
+      - name: configurar JDK ${{ matrix.java-version }}
         uses: actions/setup-java@v1
         with:
           java-version: ${{ matrix.java-version }}
-      - name: install-dependencies
+      - name: instalar dependências
         run: mvn clean install -DskipTests
-      - name: e2e-tests
+      - name: checkstyle code - google
+        run: mvn checkstyle:checkstyle
+      - name: rodar testes e2e
         run: mvn clean test
