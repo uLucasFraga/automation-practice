@@ -1,6 +1,10 @@
 name: CONTINUOUS INTEGRATION
-on: [push, pull_request]
-  pull_request: [master]
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
