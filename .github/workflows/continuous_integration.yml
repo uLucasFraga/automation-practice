@@ -1,0 +1,33 @@
+name: CONTINUOUS INTEGRATION
+
+on: [push]
+  pull_request: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [8]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: configurar JDK ${{ matrix.java-version }}
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ matrix.java-version }}
+      - name: instalar dependências
+        run: mvn clean install -DskipTests
+      - name: checkstyle do projeto
+        uses: maximbircu/pull-request-checkstyle@v1.0.0
+        with:
+          commit-message-title-regex: ".*"
+          commit-message-title-min-length: 20
+          commit-message-title-max-length: 72
+          branch-name-regex: ".*"
+          branch-name-min-length: 20
+          branch-name-max-length: 72
+      - name: rodar testes e2e
+        run: mvn clean test
