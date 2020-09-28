@@ -8,7 +8,7 @@
 
 ##### status:
 
-![TEST CI/CD](https://github.com/uLucasFraga/automation-practice/workflows/TEST%20CI/CD/badge.svg)
+![CONTINUOUS INTEGRATION](https://github.com/uLucasFraga/automation-practice/workflows/CONTINUOUS%20INTEGRATION/badge.svg?branch=master)
 
 ---
 
