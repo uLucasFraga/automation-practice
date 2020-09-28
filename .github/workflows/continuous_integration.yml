@@ -33,5 +33,6 @@ jobs:
         branch-name-min-length: 20
         branch-name-max-length: 72
   testar-web:
-      - name: rodar testes e2e
-        run: mvn clean test
+    steps:
+    - name: rodar testes e2e
+      run: mvn clean test
