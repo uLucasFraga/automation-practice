@@ -8,16 +8,16 @@
 
 ##### status:
 
-![TEST CI/CD](https://github.com/uLucasFraga/automation-practice/workflows/TEST%20CI/CD/badge.svg)
+![CONTINUOUS INTEGRATION](https://github.com/uLucasFraga/automation-practice/workflows/CONTINUOUS%20INTEGRATION/badge.svg?branch=master)
 
 ---
 
 ### Resumo:
-O nome do repositório é exatamente o nome do site em que iriamos brincar/testar
+O nome do repositório é o **site** em que iremos brincar/testar, por isso está em EN.
 
-Porém, a intenção será manter o máximo possível em **PT-BR** (mesmo que para alguns termos se torne estranho).
+Porém, a intenção será manter o máximo possível em **PT-BR** (_mesmo que para alguns termos se torne estranho_).
 
-Vale ressaltar que esse repositório não tem intenção de tornar algo profissional.
+Vale ressaltar que esse repositório não tem intenção de se tornar algo profissional.
 
 **Funcionará apenas para conhecimento geral, servindo como um conteúdo de estudos, _testes_ e o crescimento compartilhado de todos.**
 
