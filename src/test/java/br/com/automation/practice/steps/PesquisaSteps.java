@@ -36,5 +36,6 @@ public class PesquisaSteps {
   @Então("^ele verifica que o produto não existe pela mensagem: \"([^\"]*)\"$")
   public void eleVerificaQueOProdutoNaoExistePelaMensagem(String mensagem) {
     assertTrue(pesquisaPage.verificarPesquisaInvalida(mensagem));
+    
   }
 }
