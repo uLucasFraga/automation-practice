@@ -6,9 +6,10 @@
 
 1. [WEB](https://github.com/uLucasFraga/automation-practice/blob/master/src/WEB.md)
 
+
 ##### status:
 
-![CONTINUOUS INTEGRATION](https://github.com/uLucasFraga/automation-practice/workflows/CONTINUOUS%20INTEGRATION/badge.svg?branch=master)
+[![CONTINUOUS INTEGRATION](https://github.com/uLucasFraga/automation-practice/workflows/CONTINUOUS%20INTEGRATION/badge.svg?branch=master)](https://github.com/uLucasFraga/automation-practice/actions)
 
 ---
 
