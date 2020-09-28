@@ -1,6 +1,7 @@
 name: CONTINUOUS INTEGRATION
 
-on: [push]
+on:
+  push:
   pull_request: [master]
   workflow_dispatch:
 
