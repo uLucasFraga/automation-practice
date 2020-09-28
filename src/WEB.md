@@ -9,7 +9,7 @@ Repositório para testes automatizados para WEB.
 
 ##### status:
 
-![CONTINUOUS INTEGRATION](https://github.com/uLucasFraga/automation-practice/workflows/CONTINUOUS%20INTEGRATION/badge.svg?branch=develop)
+[![CONTINUOUS INTEGRATION](https://github.com/uLucasFraga/automation-practice/workflows/CONTINUOUS%20INTEGRATION/badge.svg?branch=develop)](https://github.com/uLucasFraga/automation-practice/actions)
 
 
 ## Índice sobre o projeto:

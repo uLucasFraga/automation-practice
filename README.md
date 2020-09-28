@@ -6,22 +6,21 @@
 
 1. [WEB](https://github.com/uLucasFraga/automation-practice/blob/master/src/WEB.md)
 
+
 ##### status:
 
-![CONTINUOUS INTEGRATION](https://github.com/uLucasFraga/automation-practice/workflows/CONTINUOUS%20INTEGRATION/badge.svg?branch=master)
+[![CONTINUOUS INTEGRATION](https://github.com/uLucasFraga/automation-practice/workflows/CONTINUOUS%20INTEGRATION/badge.svg?branch=master)](https://github.com/uLucasFraga/automation-practice/actions)
 
 ---
 
 ### Resumo:
 O nome do repositório é o **site** em que iremos brincar/testar, por isso está em EN.
 
-Porém, a intenção será manter o máximo possível em **PT-BR** (_mesmo que para alguns termos se torne estranho_).
+Porém, a intenção será manter o máximo possível em **PT-BR** (_mesmo que para alguns termos se torne estranho_). Vale ressaltar que esse repositório não tem intenção de se tornar algo profissional.
 
-Vale ressaltar que esse repositório não tem intenção de se tornar algo profissional.
+**Funcionará apenas para conhecimento geral, servindo como um conteúdo de estudos, _testes_ e o crescimento compartilhado.**
 
-**Funcionará apenas para conhecimento geral, servindo como um conteúdo de estudos, _testes_ e o crescimento compartilhado de todos.**
-
-Logo, será super bem-vindo os pontos abaixo:
+Logo, é muito bem-vindo os pontos abaixo:
 
 ```
 - Sugestões
