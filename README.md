@@ -31,7 +31,7 @@ Logo, é muito bem-vindo os pontos abaixo:
 
 ### Contato:
 
-**email:** lucas.fragaa@gmail.com
+**email:** lucass.fragaa@gmail.com
 
 **twitter:** https://twitter.com/ulucasfraga
 
