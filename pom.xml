@@ -11,7 +11,7 @@
     <description>simples projeto em Java com maven, selenium, cucumber, junit e allure</description>
 
     <properties>
-        <junit.version>4.13</junit.version>
+        <junit.version>4.13.1</junit.version>
         <aspectj.version>1.9.5</aspectj.version>
         <cucumber.version>1.2.5</cucumber.version>
         <selenium.version>3.141.59</selenium.version>
