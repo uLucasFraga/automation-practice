@@ -3,7 +3,7 @@ package br.com.automation.practice.pages;
 import br.com.automation.practice.utils.commons.PaginaBase;
 import org.openqa.selenium.By;
 
-public class PesquisaPaginaBase extends PaginaBase {
+public class PesquisaPagina extends PaginaBase {
 
   private final By INPUT_PESQUISA = By.id("search_query_top");
   private final By RESULTADO_PESQUISA_VALIDA = By.cssSelector(".right-block h5 a");
@@ -11,7 +11,7 @@ public class PesquisaPaginaBase extends PaginaBase {
   private final By RESULTADO_PRODUTOS_VALIDO = By.className("heading-counter");
 
   public void pesquisar(String texto) {
-    preencherCampo(texto, INPUT_PESQUISA);
+    preencherCampo(INPUT_PESQUISA, texto);
     apertarENTER(INPUT_PESQUISA);
   }
 

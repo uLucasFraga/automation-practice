@@ -1,16 +1,16 @@
 package br.com.automation.practice.utils.commons;
 
 import br.com.automation.practice.enums.Browsers;
+import java.util.ArrayList;
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class PaginaBase {
 
@@ -110,7 +110,7 @@ public class PaginaBase {
     return esperarElementos(localizador);
   }
 
-  protected void preencherCampo(String texto, By localizador) {
+  protected void preencherCampo(By localizador, String texto) {
     estaVisivel(localizador);
     pegarElemento(localizador).clear();
     this.esperarPorTextoNoElemento(localizador, "");
@@ -132,6 +132,12 @@ public class PaginaBase {
         break;
       }
     }
+  }
+
+  protected void selecionarPorTexto(By localizador, String texto) {
+    Select selecionar = new Select(pegarElemento(localizador));
+    estaVisivelNoHtml(localizador);
+    selecionar.selectByVisibleText(texto);
   }
 
   protected void clicar(By localizador) {

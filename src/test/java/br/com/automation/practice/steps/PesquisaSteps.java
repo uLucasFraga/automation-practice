@@ -1,6 +1,6 @@
 package br.com.automation.practice.steps;
 
-import br.com.automation.practice.pages.PesquisaPaginaBase;
+import br.com.automation.practice.pages.PesquisaPagina;
 import cucumber.api.java.Before;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -9,11 +9,11 @@ import static org.junit.Assert.assertTrue;
 
 public class PesquisaSteps {
 
-  private PesquisaPaginaBase pesquisaPage;
+  private PesquisaPagina pesquisaPage;
 
   @Before
   public void iniciar() {
-    pesquisaPage = new PesquisaPaginaBase();
+    pesquisaPage = new PesquisaPagina();
   }
 
   /* =========================QUANDO========================= */
