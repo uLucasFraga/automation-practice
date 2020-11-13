@@ -105,7 +105,7 @@
                     </systemProperties>
                     <systemPropertyVariables>
                         <environment>${browser}</environment>
-                        <environment>${baseURL}</environment>
+                        <environment>${urlBase}</environment>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
