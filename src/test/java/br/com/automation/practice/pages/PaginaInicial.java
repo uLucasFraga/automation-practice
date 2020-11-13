@@ -21,4 +21,9 @@ public class PaginaInicial extends PaginaBase {
     estaVisivel(RESULTADO_PAGINA_INICIAL);
     return pegarTexto(RESULTADO_PAGINA_INICIAL).equals(texto);
   }
+
+  public void acessarContacteNos(String texto) {
+    By SESSAO = By.linkText(texto);
+    clicar(SESSAO);
+  }
 }
