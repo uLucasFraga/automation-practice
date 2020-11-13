@@ -1,16 +1,15 @@
 package br.com.automation.practice.enums;
 
+import static br.com.automation.practice.utils.Drivers.criarDriver;
+
 import br.com.automation.practice.utils.ManipularPropriedades;
+import java.net.MalformedURLException;
+import java.net.URL;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import static br.com.automation.practice.utils.Drivers.criarDriver;
 
 public enum Browsers {
   FF_LINUX("webdriver.gecko.driver", "/geckodriver_linux"),
@@ -30,8 +29,8 @@ public enum Browsers {
   }
 
   public static void mostrarOpcoesValidasDosBrowsers() {
-    for (Browsers browsers : Browsers.values()) {
-      System.out.println("======= ".concat(browsers.name()));
+    for (Browsers tipoBrowser : Browsers.values()) {
+      System.out.println("======= ".concat(tipoBrowser.name()));
     }
   }
 
